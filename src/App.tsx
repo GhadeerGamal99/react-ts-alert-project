@@ -1,29 +1,47 @@
-import "./components/ui/Alert/Alert";
-import "./App.css";
-import Alert from "./components/ui/Alert/Alert";
-import { Ban } from "lucide-react";
+import { AlertTriangle, Ban, Bell, CheckCheck, Info } from "lucide-react";
 
-function App() {
+import Alert from "./components/ui/Alert/Alert";
+
+const App = () => {
   return (
-    <div style={{ margin: "2rem" }}>
+    <div className="app-wrapper">
+      <Alert type={"alert-default"} icon={<Bell size={20} />} title={"Upgrade your plan"}>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur temporibus doloremque{" "}
+          <a href="/">laboriosam</a> iste totam officiis beatae quas.
+        </p>
+      </Alert>
+
       <Alert
         type={"alert-info"}
-        title={"Something went wrong"}
-        description=" Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam
-        alias debitis, officia expedita eligendi ut placeat quae minima! Minus,
-        eos."
-        icon={<Ban size={20} />}
+        icon={<Info size={20} />}
+        title={"Note"}
+        description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur temporibus doloremque praesentium
+        laboriosam iste totam officiis beatae sint non quas."
       />
       <Alert
-        type={"alert-default"}
-        title={"Something went wrong"}
-        description=" Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam
-        alias debitis, officia expedita eligendi ut placeat quae minima! Minus,
-        eos."
+        type={"alert-success"}
+        icon={<CheckCheck size={20} />}
+        title={"Your order has been processed"}
+        description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur temporibus doloremque praesentium
+        laboriosam iste totam officiis beatae sint non quas."
+      />
+      <Alert
+        type={"alert-error"}
         icon={<Ban size={20} />}
+        title={"Something went wrong"}
+        description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur temporibus doloremque praesentium
+        laboriosam iste totam officiis beatae sint non quas."
+      />
+      <Alert
+        type={"alert-warning"}
+        icon={<AlertTriangle size={20} />}
+        title={"Tips & Tricks"}
+        description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur temporibus doloremque praesentium
+        laboriosam iste totam officiis beatae sint non quas."
       />
     </div>
   );
-}
+};
 
 export default App;

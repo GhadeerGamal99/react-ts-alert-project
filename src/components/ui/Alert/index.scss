@@ -24,41 +24,46 @@ $successColor: #7acf58d6;
 $successBorder: rgba(0, 255, 0, 0.322);
 
 @mixin alert($name, $bgColor, $color, $borderColor) {
-    .#{$name} {
-        border-radius: 0.8rem;
-        padding: 1.3rem;
-        background-color: $bgColor;
-        color: $color;
-        border: 2px dotted $borderColor;
-        margin-bottom: 1rem;
+  .#{$name} {
+    border: 2px dotted $borderColor;
+    border-radius: 0.8rem;
+    padding: 1.3rem;
+    background-color: $bgColor;
+    color: $color;
+    margin-bottom: 1rem;
 
-        .alert-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+    .alert-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-            .title {
-                display: flex;
-                align-items: center;
-                font-size: 1.2rem;
+      .title {
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
 
-                svg {
-                    margin-right: 0.6rem;
-                }
-            }
-
-            .close {
-                cursor: pointer;
-            }
+        svg {
+          margin-right: 0.6rem;
         }
+      }
 
-        p {
-            font-size: 0.9rem;
-            font-weight: 500;
-            line-height: 1.5rem;
-            margin-top: 1.2rem;
-        }
+      .close {
+        cursor: pointer;
+      }
     }
+
+    p {
+      font-size: 0.9rem;
+      font-weight: 500;
+      line-height: 1.5rem;
+      margin-top: 1.2rem;
+    }
+
+    a {
+      color: #9499ff;
+      font-weight: 600;
+    }
+  }
 }
 
 @include alert("alert-default", $defaultBg, $defaultColor, $defaultBorder);
