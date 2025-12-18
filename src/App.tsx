@@ -1,14 +1,21 @@
-import './components/ui/Alert/Alert'
-import './App.css'
-import Alert from './components/ui/Alert/Alert'
+import "./components/ui/Alert/Alert";
+import "./App.css";
+import Alert from "./components/ui/Alert/Alert";
+import { Ban } from "lucide-react";
 
 function App() {
-
   return (
-    <>
-      <Alert/>
-    </>
-  )
+    <div style={{ margin: "2rem" }}>
+      <Alert
+        type={"alert-danger"}
+        title={"Something went wrong"}
+        description=" Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam
+        alias debitis, officia expedita eligendi ut placeat quae minima! Minus,
+        eos."
+        icon={<Ban size={20} />}
+      />
+    </div>
+  );
 }
 
-export default App
+export default App;
