@@ -7,7 +7,15 @@ function App() {
   return (
     <div style={{ margin: "2rem" }}>
       <Alert
-        type={"alert-danger"}
+        type={"alert-info"}
+        title={"Something went wrong"}
+        description=" Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam
+        alias debitis, officia expedita eligendi ut placeat quae minima! Minus,
+        eos."
+        icon={<Ban size={20} />}
+      />
+      <Alert
+        type={"alert-default"}
         title={"Something went wrong"}
         description=" Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam
         alias debitis, officia expedita eligendi ut placeat quae minima! Minus,
