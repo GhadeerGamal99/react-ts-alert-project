@@ -53,5 +53,5 @@ npm install
 npm run dev
 
 ## 🌐 Live Demo
-https://react-alerts-ui.vercel.app
+[\[https://react-alerts-ui.vercel.app\](https://react-ts-alert-project.vercel.app/)](https://react-ts-alert-project.vercel.app/)
 
